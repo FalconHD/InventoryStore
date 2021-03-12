@@ -371,6 +371,7 @@ body .sett .z2 .z21 div, .bdlg .sett .z2 .z21 div {
 body .sett .z2 .z21 div svg, .bdlg .sett .z2 .z21 div svg {
   width: 25px;
   height: 25px;
+  margin-right: 7px;
 }
 
 body .sett .cor, .bdlg .sett .cor {
