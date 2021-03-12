@@ -3,8 +3,8 @@
 window.onresize = ()=>{
     if(window.innerWidth < 500){
         console.log("alo");
-        window.location.href = "../mobile/index.html"
+        window.location.href = "https://inventorymobile.netlify.app/"
     }else if(window.innerWidth > 500){
-        window.location.href = "../Web/index.html"
+        window.location.href = "https://inventoryweb.netlify.app/"
     }
 }
