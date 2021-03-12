@@ -88,6 +88,16 @@ body .top, .bdlg .top {
   background-color: #2c2a3e;
   border-bottom: 5px black solid;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .top .c1, .bdlg .top .c1 {
@@ -109,7 +119,12 @@ body .top .c1 .next, .bdlg .top .c1 .next {
   margin: -25px;
 }
 
-body .top .c1 .nmr, .bdlg .top .c1 .nmr {
+body .top .c1 img, .bdlg .top .c1 img {
+  margin: 20px;
+  width: 75%;
+}
+
+body .top .nmr, .bdlg .top .nmr {
   background-color: #ff7f00;
   text-align: center;
   width: 170px;
@@ -119,11 +134,6 @@ body .top .c1 .nmr, .bdlg .top .c1 .nmr {
   font-weight: bold;
   border: 4px black solid;
   margin-bottom: 20px;
-}
-
-body .top .c1 img, .bdlg .top .c1 img {
-  margin: 20px;
-  width: 75%;
 }
 
 body .myproduct, .bdlg .myproduct {
@@ -194,7 +204,7 @@ body span, .bdlg span {
 
 body .topsellers, .bdlg .topsellers {
   position: absolute;
-  bottom: 15vh;
+  bottom: 10%;
 }
 
 body .topsellers table, .bdlg .topsellers table {
@@ -568,5 +578,18 @@ body .sett div button:hover, .bdlg .sett div button:hover {
 
 .bdlg .log .c .buttonfb img {
   width: 8px;
+}
+
+#chartsContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#chartsContainer canvas {
+  width: 100% !important;
+  min-width: 100%;
+  height: auto !important;
 }
 /*# sourceMappingURL=mobsass.css.map */

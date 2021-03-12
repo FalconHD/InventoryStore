@@ -13,16 +13,20 @@
     <div class="top">
 
         <div class="c1">
-            <span>
+            <span >
                 <tagname style="color:#ff7f00; font-size: 40px;">Dash<tagname style="color:#226cfc;">board
             </span>
-            <div class="next">
+            <div class="next" id="nextChart">
                 <img style="width: 25px;" src="img/next.svg" alt="">
             </div>
 
-            <img src="img/g1.png" alt="g1">
-            <div class="nmr">987,88$</div>
+            <div id="chartsContainer">
+                <canvas class="canvass" id="revenue"></canvas>
+                <canvas class="canvass" id="Qua"></canvas>
+            </div>
+            
         </div>
+        <div class="nmr">987,88$</div>
     </div>
 
     <div class="topsellers">
@@ -96,4 +100,8 @@
     </div>
 </body>
 <script src="redirecter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="js/chartjsRevenue.js"></script>
+<script src="js/chartjsQuantity.js"></script>
+
 </html>
