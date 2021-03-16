@@ -109,8 +109,8 @@ function editItem(id) {
     })
 }
 document.querySelector('.deleteConfiramtion').style.display = "none"
-const fo = document.querySelector('#popop')
-document.querySelector("#popop").addEventListener('submit',function(e){
+const fo = document.querySelector('#unesZaml')
+document.querySelector("#unesZaml").addEventListener('submit',function(e){
     e.preventDefault();
     document.getElementById("myForm").style.display = "none";
     document.querySelector("#notBlured").style.filter = "blur(0)";
