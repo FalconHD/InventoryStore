@@ -132,14 +132,14 @@
         <span>REGISTER</span>
 
         <div class="c">
-            <input type="text" name="Email Address" placeholder="User Name">
-            <input type="text" name="Email Address" placeholder="Email Address">
-            <input type="text" name="Password" placeholder="Password">
+            <input type="text" name="Email Address" placeholder="User Name" id="username">
+            <input type="text" name="Email Address" placeholder="Email Address" id="email">
+            <input type="text" name="Password" placeholder="Password" id="password">
 
 
 
 
-            <button class="buttonlo">Sign up</button>
+            <button class="buttonlo" onclick="registerButton()">Sign up</button>
             <div class="or">OR</div>
             <button class="buttongo"> <img src="img/Google Logo.svg.svg" alt="">
                 Continue with Google</button>
@@ -149,9 +149,32 @@
         </div>
 
     </div>
-
+    <div class="deleteConfiramtion">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="277.628" height="244.526" viewBox="0 0 277.628 244.526">
+                <g id="Icon_feather-alert-triangle" data-name="Icon feather-alert-triangle" transform="translate(15 15)"
+                    opacity="0.7">
+                    <path id="Tracé_55" data-name="Tracé 55"
+                        d="M126.829,54.868,26.456,222.434A23.7,23.7,0,0,0,46.72,257.985H247.467a23.7,23.7,0,0,0,20.264-35.551L167.358,54.868a23.7,23.7,0,0,0-40.529,0Z"
+                        transform="translate(-23.28 -43.459)" fill="none" stroke="#f60b0b" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="30" />
+                    <path id="Tracé_56" data-name="Tracé 56" d="M180,135v47.4" transform="translate(-56.186 -62.68)"
+                        fill="none" stroke="#f60b0b" stroke-linecap="round" stroke-linejoin="round" stroke-width="30" />
+                    <path id="Tracé_57" data-name="Tracé 57" d="M180,255h0" transform="translate(-56.186 -87.876)"
+                        fill="none" stroke="#f60b0b" stroke-linecap="round" stroke-linejoin="round" stroke-width="30" />
+                </g>
+            </svg>
+            <span id="errorName"></span>
+            
+            <div id="buttons">
+                <button onclick="tryAgain()">Try Again</button>
+            </div>
+        </div>
+    </div>
 
 
 </body>
-<script  src="redirecter.js"></script>
+<!-- <script  src="redirecter.js"></script> -->
+<script src="js/auth.js"></script>
+
 </html>

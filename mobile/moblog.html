@@ -16,15 +16,15 @@
         <span>LOGIN</span>
 
         <div class="c">
-            <input type="text" name="Email Address" placeholder="Email Address">
-            <input type="text" name="Password" placeholder="Password">
+            <input type="text" name="Email Address" placeholder="Email Address" id="email">
+            <input type="text" id="password" placeholder="Password">
             <div><img src="img/Remember.png" alt="Remember">
                 Remember me</div>
 
 
 
 
-            <a href="index.html"><button class="buttonlo">Log In</button></a>
+            <button class="buttonlo" onclick="loginButton()">Log In</button>
             <div class="or">OR</div>
             <button class="buttongo"> <img src="img/Google Logo.svg.svg" alt="">
                 Continue with Google</button>
@@ -37,5 +37,7 @@
 
 
 </body>
-<script  src="redirecter.js"></script>
+<script src="redirecter.js"></script>
+<script src="js/auth.js"></script>
+
 </html>
