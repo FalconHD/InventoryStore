@@ -21,6 +21,7 @@ body {
   flex-direction: column;
   height: 100vh;
   position: relative;
+
   .product {
     height: 80vh;
     width: 100%;
@@ -350,8 +351,8 @@ body {
         color: white;
         font-family: sans-serif;
         position: absolute;
-        right: -26px;
-        top: -46px;
+        right: -33px;
+        top: -52px;
       }
     }
   }
@@ -401,6 +402,17 @@ span {
         }
       }
     }
+  }
+}
+.fixeadd {
+  position: fixed;
+  right: 15px;
+
+  bottom: 60px;
+  img {
+    width: 50px;
+    stroke: 3px black solid;
+    fill: chartreuse;
   }
 }
 .bar {

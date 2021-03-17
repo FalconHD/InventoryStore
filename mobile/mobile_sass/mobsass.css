@@ -470,8 +470,8 @@ body .popAdd div .btn.cancel, .bdlg .popAdd div .btn.cancel {
   color: white;
   font-family: sans-serif;
   position: absolute;
-  right: -26px;
-  top: -46px;
+  right: -33px;
+  top: -52px;
 }
 
 span {
@@ -534,6 +534,18 @@ span {
 
 .topsellers table td div img {
   width: 20%;
+}
+
+.fixeadd {
+  position: fixed;
+  right: 15px;
+  bottom: 60px;
+}
+
+.fixeadd img {
+  width: 50px;
+  stroke: 3px black solid;
+  fill: chartreuse;
 }
 
 .bar {
