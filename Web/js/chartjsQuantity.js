@@ -46,8 +46,8 @@ var sales = (id) => {
 
   })
 }
-
-sales(15)
+var id = window.localStorage.getItem('id')?window.localStorage.getItem('id'):0
+sales(id)
 
 
 

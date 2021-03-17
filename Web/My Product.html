@@ -15,7 +15,7 @@
             <div class="sec">
                 <img class="image" src="https://s2.dmcdn.net/v/SJXad1U-e0K3cbLLX/x1080" alt="img">
                 <div class="underimage">
-                    <div> USER NAME</div>
+                    <div id="ProfilUsername"> USER NAME</div>
                     <div class="div2">my profile</div>
 
                 </div>
@@ -101,12 +101,12 @@
         </div>
     </div>
     <div class="form-popup" id="myForm">
-        <form id="popop">
+        <section class="popContainer">
 
-            <div>
+            <div id="popop">
                 <span class="btn cancel" onclick="closeForm()">X</span>
-                <section>
-                    <h1>new product</h1>
+                <section >
+                    <h1>New product</h1>
                     <input type="text" placeholder="Enter name" name="name" name="name">
                     <small id="name">please check the name</small>
 
@@ -123,9 +123,6 @@
 
                     <input type="text" placeholder="Enter category" name="category">
                     <small id="category">please check the category</small>
-
-
-
                 </section>
                 <section>
                     <p>Upload multiple Images</p>
@@ -137,9 +134,9 @@
                 </section>
 
             </div>
-            <button id="formProfuctButton" type="submit" class="btn" >update product</button>
+            <button id="formProfuctButton"  class="btn">update product</button>
 
-        </form>
+        </section>
     </div>
     <div class="deleteConfiramtion">
         <div>
@@ -168,4 +165,5 @@
 
 <script src="js/seller/sellerProduct.js"></script>
 <script  src="redirecter.js"></script>
+<script src="js/main.js"></script>
 </html>

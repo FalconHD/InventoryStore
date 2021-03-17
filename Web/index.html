@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass.css">
-    
+
     <title>Document</title>
 </head>
 
@@ -16,9 +16,8 @@
         <div class="sec">
             <img class="image" src="img/6.png" alt="img">
             <div class="underimage">
-                <div> USER NAME</div>
+                <div id="ProfilUsername"> USER NAME</div>
                 <div class="div2">my profile</div>
-
             </div>
         </div>
         <div class="zone12">
@@ -65,7 +64,7 @@
             </ul>
         </div>
         <div>
-            <a href="login.html"><button>log out</button></a>
+            <a><button onclick="logOut()">log out</button></a>
         </div>
 
 
@@ -81,13 +80,13 @@
             <div class="zone21">
                 <div class=A>
 
-                    <div>987,88$</div>
-                    <canvas  id="Qua"></canvas>
+                    <div id="MainRevenue">987,88$</div>
+                    <canvas id="Qua"></canvas>
                 </div>
                 <div class=A>
 
-                    <div>459</div>
-                    <canvas  id="revenue"></canvas>
+                    <div id="MainTotal">459</div>
+                    <canvas id="revenue"></canvas>
                 </div>
             </div>
 
@@ -96,36 +95,16 @@
         <div class="topsellers">
 
             <table>
-                <tr>
+                <thead>
                     <th></th>
                     <th>TOP Sellers</th>
                     <th>Number of sales</th>
                     <th>total income</th>
-                </tr>
-                <tr>
-                    <td>#1</td>
-                    <td>
-                        <div><img src="img/S1.png" alt="img">Robert Johnstons</div>
-                    </td>
-                    <td>2341</td>
-                    <td>18009 DH</td>
-                </tr>
-                <tr>
-                    <td>#2</td>
-                    <td>
-                        <div><img src="img/S2.png" alt="img">Robert Johnstons</div>
-                    </td>
-                    <td>2341</td>
-                    <td>18009 DH</td>
-                </tr>
-                <tr>
-                    <td>#3</td>
-                    <td>
-                        <div><img src="img/S3.png" alt="img">Robert Johnstons</div>
-                    </td>
-                    <td>2341</td>
-                    <td>18009 DH</td>
-                </tr>
+                </thead>
+                <tbody id="TopSellers">
+                   
+
+                </tbody>
             </table>
 
         </div>
@@ -135,8 +114,10 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script  src="js/chartjsRevenue.js"></script>
-<script  src="js/chartjsQuantity.js"></script>
-<script  src="redirecter.js"></script>
+<script src="js/chartjsRevenue.js"></script>
+<script src="js/chartjsQuantity.js"></script>
+<script src="redirecter.js"></script>
 <script src="js/main.js"></script>
+<script src="js/seller/sellerProfile.js"></script>
+
 </html>

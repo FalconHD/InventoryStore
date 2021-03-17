@@ -18,10 +18,15 @@ function loginButton() {
             },
             body: JSON.stringify(loginInfo)
         }).then(response => response.json())
-            .catch(err => console.log(err))
             .then(data => {
-                window.localStorage.setItem('id', data.result.user_id)
-                window.location.href = "index.html"
+                if (!data.error) {
+                    window.localStorage.setItem('id', data.result.user_id)
+                    window.location.href = "index.html"
+                } else {
+                    container.style.display = "flex"
+                    const er = document.querySelector('#errorName')
+                    er.innerHTML = data.error
+                }
             })
     } else {
         container.style.display = "flex"
@@ -32,8 +37,6 @@ function loginButton() {
 
 function loginButton1(loginInfo) {
     if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email.value) && password.value != "") {
-        
-
         fetch('http://localhost/backend/api/Login.php', {
             method: 'POST',
             headers: {
@@ -70,18 +73,18 @@ function registerButton() {
         }).then(response => response.json())
             .then(data => {
                 console.log(data);
-                if(!data.message){
-                    ((`${data[0].split(':')[0]}`) === 'error ')?popRegister(data):console.log("none");
-                }else{
+                if (!data.message) {
+                    ((`${data[0].split(':')[0]}`) === 'error ') ? popRegister(data) : console.log("none");
+                } else {
                     console.log(data.message);
                     loginButton1({
                         email: email.value,
                         password: password.value
-                    }) ;
+                    });
                 }
-                
+
             })
-       
+
     } else {
         container.style.display = "flex"
         const er = document.querySelector('#errorName')
@@ -93,10 +96,11 @@ const container = document.querySelector('.deleteConfiramtion')
 container.style.display = "none"
 function popRegister(data) {
     container.style.display = "flex"
-        const er = document.querySelector('#errorName')
-        er.innerHTML = `${data[0].split(':')[3]}`
+    const er = document.querySelector('#errorName')
+    er.innerHTML = `${data[0].split(':')[3]}`
 }
 
-function tryAgain(){
+function tryAgain() {
     container.style.display = "none"
 }
+

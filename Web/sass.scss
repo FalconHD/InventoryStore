@@ -301,15 +301,15 @@ body {
   }
   .form-popup {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
-    
+    height: 50vh;
     display: flex;
     margin: 0 auto;
     width: 100%;
     z-index: 9;
     
-    form {
+    .popContainer {
       width: 90%;
       padding: 10px;
       background-color: $clr-bk-body2;
@@ -333,7 +333,9 @@ body {
         background-color: white;
         color: $blue;
       }
-      
+      &:disabled{
+        background-color: gray;
+      }
     }
     
     }
@@ -532,9 +534,7 @@ body {
     }
   }
   //login
-  #loginRegister {
-    
-  }
+ 
   .logdesc {
     background-image: url(img/Trac.svg);
     color: rgb(255, 255, 255);

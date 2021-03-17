@@ -399,8 +399,9 @@ body .deleteConfiramtion div #buttons {
 
 body .form-popup {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,7 +410,7 @@ body .form-popup {
   z-index: 9;
 }
 
-body .form-popup form {
+body .form-popup .popContainer {
   width: 90%;
   padding: 10px;
   background-color: #3f3d56;
@@ -422,7 +423,7 @@ body .form-popup form {
           filter: drop-shadow(white);
 }
 
-body .form-popup form button {
+body .form-popup .popContainer button {
   background-color: #226cfc;
   border: none;
   color: white;
@@ -432,9 +433,13 @@ body .form-popup form button {
   float: right;
 }
 
-body .form-popup form button:hover {
+body .form-popup .popContainer button:hover {
   background-color: white;
   color: #226cfc;
+}
+
+body .form-popup .popContainer button:disabled {
+  background-color: gray;
 }
 
 body .form-popup div {

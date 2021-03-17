@@ -212,9 +212,9 @@
                     <span>Phone :</span>
                 </div>
                 <div class="c2">
-                    <span> Nick Reynolds</span>
-                    <span>niyaspulath@gmail.com</span>
-                    <span>+212 648640632</span>
+                    <span id="NAME"> Nick Reynolds</span>
+                    <span id="email">niyaspulath@gmail.com</span>
+                    <span id="phone">+212 648640632</span>
                 </div>
 
             </div>
@@ -225,9 +225,9 @@
                     <span>Rank :</span>
                 </div>
                 <div class="c2">
-                    <span> youcode safi maroc</span>
-                    <span>SRTA-1</span>
-                    <span>6</span>
+                    <span id="address"> youcode safi maroc</span>
+                    <span >SRTA-<span id="user_id"></span></span>
+                    <span id="rank">6</span>
                 </div>
 
             </div>
@@ -264,7 +264,7 @@
     </div>
 </section>
 <div class="form-popup setting" id="myForm">
-    <form>
+    <section class="popContainer">
 
         <div>
             <span class="btn cancel" onclick="closeForm()">X</span>
@@ -296,11 +296,13 @@
             </section>
 
         </div>
-        <button id="formProfuctButton" type="submit" class="btn" onclick="addItem()">Update Profile</button>
+        <button id="formProfuctButton" class="btn" onclick="UpdateProfile()">Update Profile</button>
 
-    </form>
+    </section>
 </div>
 </body>
 <script src="js/seller/sellerProfile.js"></script>
 <script  src="redirecter.js"></script>
+<script src="js/main.js"></script>
+
 </html>
