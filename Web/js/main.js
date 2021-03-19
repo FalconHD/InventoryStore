@@ -42,7 +42,7 @@ fetch('http://localhost/backend/api/sales/allTodaySales.php').then(response => r
                 .then(user => {
                     const tr = document.createElement('tr')
                     tr.innerHTML = `<tr>
-                                    <td>#${idx}</td>
+                                    <td>#${idx + 1}</td>
                                     <td>
                                         <div><img src="img/S1.png" alt="img">${user.NAME}</div>
                                     </td>

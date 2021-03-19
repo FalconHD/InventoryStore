@@ -273,29 +273,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    div {
+    .divox {
+      width: 300px;
       background-color: $clr-bk-body;
-      &:first-child {
-        filter: drop-shadow(2px 4px 6px black);
-      }
-      svg {
+      border: 3px white solid;
+      border-radius: 20px;
+      span {
+        font-size: 18px;
         width: 100%;
-        margin: 30px;
+        text-align: center;
+        color: red;
+        font-weight: bold;
       }
-      width: 40%;
+
+      svg {
+        width: 50%;
+        height: AUTO;
+        margin-top: 30px;
+      }
+
       height: 350px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-    .button {
-      width: 40%;
-    }
-    #buttons {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
+
+      #buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+        width: 72%;
+
+        button {
+          height: 40px;
+          width: 100px;
+          color: red;
+          font-weight: bold;
+        }
+      }
     }
 
   }

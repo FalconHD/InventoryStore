@@ -351,9 +351,11 @@ body .deleteConfiramtion {
           align-items: center;
 }
 
-body .deleteConfiramtion div {
+body .deleteConfiramtion .divox {
+  width: 300px;
   background-color: #2c2a3e;
-  width: 40%;
+  border: 3px white solid;
+  border-radius: 20px;
   height: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,21 +372,21 @@ body .deleteConfiramtion div {
           justify-content: space-between;
 }
 
-body .deleteConfiramtion div:first-child {
-  -webkit-filter: drop-shadow(2px 4px 6px black);
-          filter: drop-shadow(2px 4px 6px black);
-}
-
-body .deleteConfiramtion div svg {
+body .deleteConfiramtion .divox span {
+  font-size: 18px;
   width: 100%;
-  margin: 30px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
 }
 
-body .deleteConfiramtion div .button {
-  width: 40%;
+body .deleteConfiramtion .divox svg {
+  width: 50%;
+  height: AUTO;
+  margin-top: 30px;
 }
 
-body .deleteConfiramtion div #buttons {
+body .deleteConfiramtion .divox #buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,9 +394,18 @@ body .deleteConfiramtion div #buttons {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px;
+  width: 72%;
+}
+
+body .deleteConfiramtion .divox #buttons button {
+  height: 40px;
+  width: 100px;
+  color: red;
+  font-weight: bold;
 }
 
 body .form-popup {

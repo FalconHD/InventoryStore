@@ -4,6 +4,7 @@ const Name = document.querySelector("input[name='name']")
 const email = document.querySelector("input[name='email']")
 const phone = document.querySelector("input[name='phone']")
 const address = document.querySelector("input[name='address']")
+const inputFile = document.querySelector("#fileElem")
 errorName = document.querySelector("small#name")
 errorEmeil = document.querySelector("small#email")
 errorPhone = document.querySelector("small#phone")
@@ -34,6 +35,12 @@ function closeForm() {
 }
 
 function UpdateProfile() {
+    console.log(inputFile.files);
+    let fd = new FormData();
+    fd.append('file', inputFile.files[0]);
+
+
+
     const user = {
         NAME: Name.value,
         email: email.value,
@@ -47,20 +54,28 @@ function UpdateProfile() {
         },
         body: JSON.stringify(user)
     }).then(() => {
+        fetch('http://localhost/backend/api/upload.php?user_id=${id}', {
+            method: 'POST',
+            body: fd
+        }).then(response => response.json()).then(data => console.log(data))
+
+
         closeForm()
         fetch(`http://localhost/backend/api/UserById.php?user_id=${id}`).then(response => response.json()).then(data => {
 
-        profile.forEach(elm => {
-            for (e in data) {
-                const item = elm.querySelector(`#${e}`)
-                if (item) { item.innerHTML = data[e] }
-            }
+            profile.forEach(elm => {
+                for (e in data) {
+                    const item = elm.querySelector(`#${e}`)
+                    if (item) { item.innerHTML = data[e] }
+                }
 
+            })
         })
-    })
     })
 
 }
+
+
 
 
 
@@ -71,7 +86,7 @@ var id = window.localStorage.getItem('id') ? window.localStorage.getItem('id') :
 
 
 if (id) {
-  
+
 
     fetch(`http://localhost/backend/api/UserById.php?user_id=${id}`).then(response => response.json()).then(data => {
 
@@ -84,7 +99,7 @@ if (id) {
         })
     })
 
-  
+
 
 
 }
@@ -94,7 +109,6 @@ function logOut() {
     window.localStorage.removeItem('id')
     location.pathname = "login.html"
 }
-
 
 
 
@@ -118,6 +132,7 @@ function inputesCheker(input, err, reg) {
 
     });
 }
+
 
 
 
