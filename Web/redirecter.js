@@ -1,9 +1,9 @@
 var id = window.localStorage.getItem('id') ? window.localStorage.getItem('id') : null
 function ofTheFirstLoad() {
     if (id && window.innerWidth < 500) {
-        location.replace(`http://localhost:3000?id=${id}`);
+        location.replace(`inventoryweb.netlify.app?id=${id}`);
     } else if (window.innerWidth < 500) {
-        location.replace(`http://localhost:3000`);
+        location.replace(`inventoryweb.netlify.app`);
     }
 }
 
@@ -11,10 +11,10 @@ ofTheFirstLoad()
 
 window.onresize = () => {
     var path = window.location.pathname;
-    console.log(`http://localhost:3002${path}`);
+    console.log(`inventorymobile.netlify.app${path}`);
 
     if (window.innerWidth < 500) {
-        id ? location.replace(`http://localhost:3002${path}?id=${id}`) : location.replace(`http://localhost:3002${path}`);
+        id ? location.replace(`inventorymobile.netlify.app${path}?id=${id}`) : location.replace(`inventorymobile.netlify.app${path}`);
     }
 }
 
@@ -26,7 +26,7 @@ if (!auth && window.innerWidth > 500) {
     window.location.pathname == "/login.html" ? null : window.location.pathname = "/login.html"
 
 } else if (window.location.pathname == "/login.html") {
-    location.replace(`http://localhost:3000/`);
+    location.replace(`inventoryweb.netlify.app/`);
 }
 
 
