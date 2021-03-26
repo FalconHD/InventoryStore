@@ -1,9 +1,9 @@
 var id = window.localStorage.getItem('id') ? window.localStorage.getItem('id') : null
 function ofTheFirstLoad() {
     if (id && window.innerWidth < 500) {
-        location.replace(`inventoryweb.netlify.app?id=${id}`);
+        location.replace(`inventorymobile.netlify.app?id=${id}`);
     } else if (window.innerWidth < 500) {
-        location.replace(`inventoryweb.netlify.app`);
+        location.replace(`inventorymobile.netlify.app`);
     }
 }
 
