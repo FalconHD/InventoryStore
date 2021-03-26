@@ -1,7 +1,7 @@
 const username = document.querySelector('#ProfilUsername')
 const revenue = document.querySelector('#MainRevenue')
 const Total = document.querySelector('#MainTotal')
-console.log(revenue);
+
 var id = window.localStorage.getItem('id') ? window.localStorage.getItem('id') : null
 
 

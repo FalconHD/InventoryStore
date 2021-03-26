@@ -54,7 +54,7 @@ function UpdateProfile() {
         },
         body: JSON.stringify(user)
     }).then(() => {
-        fetch('http://localhost/backend/api/upload.php?user_id=${id}', {
+        fetch(`http://localhost/backend/api/upload.php?user_id=${id}`, {
             method: 'POST',
             body: fd
         }).then(response => response.json()).then(data => console.log(data))
